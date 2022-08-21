@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \str_ends_with
- * @group src
- * @group strings
  * @group queries
  * @group str_ends_with
  */

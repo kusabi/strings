@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \str_slug
- * @group src
- * @group strings
  * @group case
  * @group str_slug
  */

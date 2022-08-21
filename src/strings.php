@@ -198,7 +198,7 @@ if (!function_exists('str_contains')) {
      *
      * @return bool
      */
-    function str_contains($haystack, $needle)
+    function str_contains(string $haystack, string $needle): bool
     {
         return $needle === '' || strpos($haystack, $needle) !== false;
     }
@@ -211,7 +211,7 @@ if (!function_exists('str_ends_with')) {
      *
      * @return bool
      */
-    function str_ends_with($haystack, $needle)
+    function str_ends_with(string $haystack, string $needle): bool
     {
         return $needle === '' || substr($haystack, -strlen($needle)) === $needle;
     }
@@ -226,7 +226,7 @@ if (!function_exists('str_random')) {
      *
      * @return string
      */
-    function str_random($size, $alphabet = CIPHER_ENGLISH)
+    function str_random(int $size, string $alphabet = CIPHER_ENGLISH): string
     {
         return substr(str_repeat($alphabet, ceil($size / strlen($alphabet))), -$size);
     }
@@ -240,7 +240,7 @@ if (!function_exists('str_slug')) {
      *
      * @return string
      */
-    function str_slug($string)
+    function str_slug(string $string): string
     {
         return str_case_kebab($string);
     }
@@ -253,7 +253,7 @@ if (!function_exists('str_starts_with')) {
      *
      * @return bool
      */
-    function str_starts_with($haystack, $needle)
+    function str_starts_with(string $haystack, string $needle): bool
     {
         return $needle === '' || strpos($haystack, $needle) === 0;
     }

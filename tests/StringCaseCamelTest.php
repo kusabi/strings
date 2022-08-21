@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \str_case_camel
- * @group src
- * @group strings
  * @group case
  * @group str_camel_case
  */

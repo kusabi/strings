@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \str_contains
- * @group src
- * @group strings
  * @group queries
  * @group str_contains
  */

@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \str_random
- * @group src
- * @group strings
  * @group generation
  * @group str_random
  */

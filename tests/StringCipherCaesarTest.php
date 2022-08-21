@@ -7,8 +7,6 @@ use PHPUnit\Framework\TestCase;
 /**
  * @covers \str_cipher_caesar
  * @covers \str_cipher_caesar_reverse
- * @group src
- * @group strings
  * @group ciphers
  * @group str_cipher_caesar
  */

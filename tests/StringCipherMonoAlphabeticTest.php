@@ -6,8 +6,6 @@ use PHPUnit\Framework\TestCase;
 
 /**
  * @covers \str_cipher_mono_alphabetic
- * @group src
- * @group strings
  * @group ciphers
  * @group str_cipher_mono_alphabetic
  */
