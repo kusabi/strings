@@ -1,0 +1,33 @@
+{
+    "name": "kusabi/native",
+    "description": "A library that extends PHP's native string functionality",
+    "type": "library",
+    "license": "mit",
+    "minimum-stability": "stable",
+    "prefer-stable": true,
+    "keywords": [
+        "php",
+        "strings"
+    ],
+    "require": {
+        "php": ">=7.2"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "*",
+        "phan/phan": "*",
+        "phpunit/phpunit": "*",
+        "phpbench/phpbench": "*",
+        "symfony/var-dumper": "*"
+    },
+    "autoload": {
+        "files": [
+            "src/strings.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kusabi\\Native\\Benchmarks\\": "benchmarks/",
+            "Kusabi\\Native\\Tests\\": "tests/"
+        }
+    }
+}
