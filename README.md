@@ -98,7 +98,7 @@ Below you can find links to the documentation for the new features.
 | [str_case_snake](documentation/str_case_snake.md) | Converts a string to `snake_case` |
 | [str_case_title](documentation/str_case_title.md) | Converts a string to `Title Case` |
 | [str_cipher_caesar](documentation/str_cipher_caesar.md) | Transform a string by shifting each letter up or down the alphabet |
-| [str_cipher_caesar_reverse](documentation/str_cipher_caesar.md) | Reverse the effects of `str_cipher_caesar` |
+| [str_cipher_caesar_reverse](documentation/str_cipher_caesar_reverse.md) | Reverse the effects of `str_cipher_caesar` |
 | [str_cipher_mono_alphabetic](documentation/str_cipher_mono_alphabetic.md) | Transform a string by mapping each letter to another alphabet |
 | [str_contains](documentation/str_contains.md) | Determine if a string contains another string |
 | [str_ends_with](documentation/str_ends_with.md) | Determine if a string ends with another string |
