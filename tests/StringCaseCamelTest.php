@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  */
 class StringCaseCamelTest extends TestCase
 {
-    public function provideCases()
+    public static function provideCases(): array
     {
         return [
             ['simple', 'simple'],
@@ -47,9 +47,11 @@ class StringCaseCamelTest extends TestCase
             ['BEGINNINGMiddleEND', 'beginningMiddleEnd'],
 
             ['fromCamelCaseFormat', 'fromCamelCaseFormat'],
-            ['FromPascalCaseFormat', 'fromPascalCaseFormat'],
-            ['from_snake_case_format', 'fromSnakeCaseFormat'],
             ['from-kebab-case-format', 'fromKebabCaseFormat'],
+            ['FromPascalCaseFormat', 'fromPascalCaseFormat'],
+            ['From sentence case format', 'fromSentenceCaseFormat'],
+            ['from_snake_case_format', 'fromSnakeCaseFormat'],
+            ['From Title Case Format', 'fromTitleCaseFormat'],
         ];
     }
 
@@ -59,7 +61,7 @@ class StringCaseCamelTest extends TestCase
      * @param string $from
      * @param string $to
      */
-    public function testCases($from, $to)
+    public function testCases(string $from, string $to)
     {
         $this->assertSame($to, str_case_camel($from));
     }

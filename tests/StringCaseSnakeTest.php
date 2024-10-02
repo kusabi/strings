@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  */
 class StringCaseSnakeTest extends TestCase
 {
-    public function provideCases()
+    public static function provideCases(): array
     {
         return [
             ['simple', 'simple'],
@@ -47,9 +47,11 @@ class StringCaseSnakeTest extends TestCase
             ['BEGINNINGMiddleEND', 'beginning_middle_end'],
 
             ['fromCamelCaseFormat', 'from_camel_case_format'],
-            ['FromPascalCaseFormat', 'from_pascal_case_format'],
-            ['from_snake_case_format', 'from_snake_case_format'],
             ['from-kebab-case-format', 'from_kebab_case_format'],
+            ['FromPascalCaseFormat', 'from_pascal_case_format'],
+            ['From sentence case format', 'from_sentence_case_format'],
+            ['from_snake_case_format', 'from_snake_case_format'],
+            ['From Title Case Format', 'from_title_case_format'],
         ];
     }
 
@@ -59,7 +61,7 @@ class StringCaseSnakeTest extends TestCase
      * @param string $from
      * @param string $to
      */
-    public function testCases($from, $to)
+    public function testCases(string $from, string $to)
     {
         $this->assertSame($to, str_case_snake($from));
     }

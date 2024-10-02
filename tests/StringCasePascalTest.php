@@ -11,7 +11,7 @@ use PHPUnit\Framework\TestCase;
  */
 class StringCasePascalTest extends TestCase
 {
-    public function provideCases()
+    public static function provideCases(): array
     {
         return [
             ['simple', 'Simple'],
@@ -47,9 +47,11 @@ class StringCasePascalTest extends TestCase
             ['BEGINNINGMiddleEND', 'BeginningMiddleEnd'],
 
             ['fromCamelCaseFormat', 'FromCamelCaseFormat'],
-            ['FromPascalCaseFormat', 'FromPascalCaseFormat'],
-            ['from_snake_case_format', 'FromSnakeCaseFormat'],
             ['from-kebab-case-format', 'FromKebabCaseFormat'],
+            ['FromPascalCaseFormat', 'FromPascalCaseFormat'],
+            ['From sentence case format', 'FromSentenceCaseFormat'],
+            ['from_snake_case_format', 'FromSnakeCaseFormat'],
+            ['From Title Case Format', 'FromTitleCaseFormat'],
         ];
     }
 
@@ -59,7 +61,7 @@ class StringCasePascalTest extends TestCase
      * @param string $from
      * @param string $to
      */
-    public function testCases($from, $to)
+    public function testCases(string $from, string $to)
     {
         $this->assertSame($to, str_case_pascal($from));
     }

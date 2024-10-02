@@ -20,7 +20,7 @@ if (!function_exists('str_case_camel')) {
      *
      * @return string
      */
-    function str_case_camel($string)
+    function str_case_camel(string $string): string
     {
         return lcfirst(str_replace('_', '', ucwords(
             strtolower(
@@ -39,7 +39,7 @@ if (!function_exists('str_case_kebab')) {
      *
      * @return string
      */
-    function str_case_kebab($string)
+    function str_case_kebab(string $string): string
     {
         return strtolower(
             preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', '-', $string)
@@ -55,7 +55,7 @@ if (!function_exists('str_case_pascal')) {
      *
      * @return string
      */
-    function str_case_pascal($string)
+    function str_case_pascal(string $string): string
     {
         return str_replace('_', '', ucwords(
             strtolower(
@@ -74,7 +74,7 @@ if (!function_exists('str_case_sentence')) {
      *
      * @return string
      */
-    function str_case_sentence($string)
+    function str_case_sentence(string $string): string
     {
         return ucfirst(
             strtolower(
@@ -92,7 +92,7 @@ if (!function_exists('str_case_snake')) {
      *
      * @return string
      */
-    function str_case_snake($string)
+    function str_case_snake(string $string): string
     {
         return strtolower(
             preg_replace('/[ _-]|(?<=[^\WA-Z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])/', '_', $string)
@@ -108,7 +108,7 @@ if (!function_exists('str_case_title')) {
      *
      * @return string
      */
-    function str_case_title($string)
+    function str_case_title(string $string): string
     {
         return ucwords(
             strtolower(
@@ -127,7 +127,7 @@ if (!function_exists('str_cipher_caesar')) {
      *
      * @return string
      */
-    function str_cipher_caesar($string, $shift)
+    function str_cipher_caesar(string $string, int $shift): string
     {
         $result = '';
         foreach (str_split($string) as $ch) {
@@ -161,7 +161,7 @@ if (!function_exists('str_cipher_caesar_reverse')) {
      *
      * @return string
      */
-    function str_cipher_caesar_reverse($input, $shift)
+    function str_cipher_caesar_reverse(string $input, int $shift): string
     {
         return str_cipher_caesar($input, 26 - $shift);
     }
@@ -177,7 +177,7 @@ if (!function_exists('str_cipher_mono_alphabetic')) {
      *
      * @return string
      */
-    function str_cipher_mono_alphabetic($input, $alpha, $beta)
+    function str_cipher_mono_alphabetic(string $input, string $alpha, string $beta): string
     {
         $result = '';
         foreach (str_split($input) as $character) {
